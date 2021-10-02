@@ -1,5 +1,5 @@
-<?php 
-            session_start(); //inclut les variables de session
+<?php
+            session_start(); // On inclut les variables de session
 	 		      $servname = 'localhost';
             $dbname = 'projetinfo1';
             $user = 'root';
@@ -17,7 +17,7 @@
               echo "Erreur : " . $e->getMessage();
             }
 
-            if(!empty($_POST)) { //barre de recherche si on a une requete, on vérifie le type de requete (decroissant ou croissant) et on tri
+            if(!empty($_POST)) { // Barre de recherche si on a une requete, on vérifie le type de requete (decroissant ou croissant) et on trie
               if($_POST['select_input']=='desc') {
                 $sql =  'select * from produit order by prix desc';
               }
@@ -72,17 +72,17 @@ include 'menu.php';
     <div class="row justify-content-center">
         
         <?php  
-				foreach  ($dbco->query($sql) as $row) { //boucle pour afficher exactement le nombre de produit présents dans la bdd?>
+				foreach  ($dbco->query($sql) as $row) { // Boucle pour afficher exactement le nombre de produits présents dans la bdd?>
         
         <div class="col" style="margin-left: 60px" id="<?php echo($row['nom']) ?>">
-            <form action="produit.php" method="post" name="<?php echo($row['id']) //aller dans produit.php avec le bon produit via l'id?>">
+            <form action="produit.php" method="post" name="<?php echo($row['id']) // Aller dans produit.php avec le bon produit via l'id?>">
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo($row['lien_image']) //affichage de l'image ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo($row['lien_image']) // Affichage de l'image ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo($row['nom']) //affichage du nom du produit ?></h5>
-                        <p class="card-text"><?php echo($row['prix']) //affichage du prix (en euro) ?>€</p>
-                        <p class="card-text">Stock : <?php echo($row['stock']) //affichage du stock?></p>
-                        <button type="submit" class="btn btn-primary" name="<?php echo($row['id']) ?>" id="<?php echo($row['id']) //on met des valeur dans le bouton pour pouvoir acheter le produit (en fonction du bouton ou l'on a cliqué)?>">Acheter</button>
+                        <h5 class="card-title"><?php echo($row['nom']) // Affichage du nom du produit ?></h5>
+                        <p class="card-text"><?php echo($row['prix']) // Affichage du prix (en euro) ?>€</p>
+                        <p class="card-text">Stock : <?php echo($row['stock']) // Affichage du stock?></p>
+                        <button type="submit" class="btn btn-primary" name="<?php echo($row['id']) ?>" id="<?php echo($row['id']) // On met des valeurs dans le bouton pour pouvoir acheter le produit (en fonction du bouton ou l'on a cliqué)?>">Acheter</button>
                     </div>
                 </div>
             </form>
