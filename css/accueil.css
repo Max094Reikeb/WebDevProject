@@ -1,0 +1,57 @@
+body {
+	scroll-behavior: smooth;
+}
+
+.div_accueil {
+	height: 70vh; 
+	background-size: 100vh;
+	background: #0f0c29;
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	position: relative;
+
+}
+
+.div_boutique {
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left: 200px;
+}
+
+.form-input {
+    width: 350px;
+}
+
+.title-top {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.text_accueil {
+	padding-top: 25vh;
+}
+
+.text_accueil h1 {
+    letter-spacing: 3px;
+}
+
+.custom-shape-divider-bottom-1622817714 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1622817714 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 79px;
+}
+
+.custom-shape-divider-bottom-1622817714 .shape-fill {
+    fill: white;
+}
